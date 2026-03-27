@@ -209,6 +209,7 @@
     <a href="#fig6">Fig.&thinsp;6</a>
     <a href="#tab3">Table&thinsp;3</a>
     <a href="#tab4">Table&thinsp;4</a>
+    <a href="#references">Refs</a>
   
   </div>
 </nav>
@@ -293,7 +294,7 @@
 </table>
     </div>
     <div class="fig-caption">
-      <strong>Table 2.</strong> Decoupled detection and localization metrics for DANCE and the best non-ablation baseline per dataset (IoU&thinsp;&ge;&thinsp;0.5). F1<sub>detect</sub> measures class-agnostic event detection (&ldquo;was an event found?&rdquo;). F1<sub>event</sub> additionally requires correct classification. &Delta;center is the mean absolute temporal error between predicted and ground-truth event centers, in seconds, computed over true positives.
+      <strong>Table 2.</strong> Decoupled detection and localization metrics for DANCE and the best non-ablation baseline per dataset (IoU&thinsp;&ge;&thinsp;0.5). F1<sub>detect</sub> measures class-agnostic event detection (&ldquo;was an event found?&rdquo;). F1<sub>event</sub> additionally requires correct classification. &Delta;center is the mean absolute temporal error between predicted and ground-truth event centers, in seconds, computed over true positives. Table&thinsp;2 confirms that DANCE outperforms the best baselines on both F1 metrics across all 10 datasets, while simultaneously achieving 2&ndash;18&times; lower center prediction errors on 9 out of 10 tasks.
     </div>
   </section>
 
@@ -384,6 +385,35 @@
     </div>
     <div class="fig-caption">
       <strong>Table 4.</strong> Foundation models equipped with our Perceiver+DETR decoder vs. DANCE. F1<sub>event</sub> at IoU&thinsp;&ge;&thinsp;0.5.
+    </div>
+  </section>
+
+  <!-- References -->
+  <section class="figure-section" id="references">
+    <div class="fig-header"><h2>References</h2></div>
+    <div class="fig-body" style="text-align:left;">
+      <ol style="font-size:0.85rem; line-height:1.7; padding-left:1.4rem; color:var(--text);">
+        <li>Wu, K., Zhao, Z., and Yener, B. Seizure transformer: Scaling u-net with transformer for simultaneous time-step level seizure detection from long EEG recordings. <em>preprint arXiv:2504.00336</em>, 2025.</li>
+        <li>Fatourechi, M., Bashashati, A., Ward, R. K., and Birch, G. E. EMG and EOG artifacts in brain computer interface systems: A survey. <em>Clinical neurophysiology</em>, 118(3):480&ndash;494, 2007.</li>
+        <li>Lotte, F., Bougrain, L., Cichocki, A., Clerc, M., Congedo, M., Rakotomamonjy, A., and Yger, F. A review of classification algorithms for EEG-based brain&ndash;computer interfaces: a 10 year update. <em>Journal of neural engineering</em>, 15(3):031005, 2018.</li>
+        <li>Wu, H., Li, S., and Wu, D. Motor imagery classification for asynchronous EEG-based brain&ndash;computer interfaces. <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, 32:527&ndash;536, 2024.</li>
+        <li>Seeuws, N., De Vos, M., and Bertrand, A. Avoiding post-processing with event-based detection in biomedical signals. <em>IEEE Transactions on Biomedical Engineering</em>, 71(8):2442&ndash;2453, 2024.</li>
+        <li>P&eacute;rez-Velasco, S., Santamar&iacute;a-V&aacute;zquez, E., Mart&iacute;nez-Cagigal, V., Marcos-Mart&iacute;nez, D., and Hornero, R. EEGSym: Overcoming inter-subject variability in motor imagery based BCIs with deep learning. <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, 2022.</li>
+        <li>Wang, J., Zhao, S., Luo, Z., Zhou, Y., Jiang, H., Li, S., Li, T., and Pan, G. CBramod: A criss-cross brain foundation model for EEG decoding. In <em>The Thirteenth International Conference on Learning Representations (ICLR)</em>, 2025.</li>
+        <li>Jiang, W.-B., Zhao, L.-M., and Lu, B.-L. Large brain model for learning generic representations with tremendous EEG data in BCI. In <em>The Twelfth International Conference on Learning Representations (ICLR)</em>, 2024.</li>
+        <li>D&ouml;ner, B., Ingolfsson, T. M., Benini, L., and Li, Y. LUNA: Efficient and topology-agnostic foundation model for EEG signal analysis. In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2026.</li>
+        <li>El Ouahidi, Y., Lys, J., Th&ouml;lke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., and Lioi, G. REVE: A foundation model for EEG &mdash; Adapting to any setup with large-scale pretraining on 25,000 subjects. In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2026.</li>
+        <li>Willett, F. R., Kunz, E. M., Fan, C., Avansino, D. T., Wilson, G. H., Choi, E. Y., et al. A high-performance speech neuroprosthesis. <em>Nature</em>, 620(7976):1031&ndash;1036, 2023.</li>
+        <li>Altaheri, H., Muhammad, G., and Alsulaiman, M. Physics-informed attention temporal convolutional network for EEG-based motor imagery classification. <em>IEEE Transactions on Industrial Informatics</em>, 19(2):2249&ndash;2258, 2023.</li>
+        <li>Defossez, A., Caucheteux, C., Rapin, J., Kabeli, O., and King, J.-R. Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5(10):1097&ndash;1107, 2023.</li>
+        <li>Levy, J., Zhang, M., Pinet, S., Rapin, J., Banville, H., d&rsquo;Ascoli, S., and King, J.-R. Brain-to-text decoding: A non-invasive approach via typing. <em>preprint arXiv:2502.17480</em>, 2025.</li>
+        <li>Sivakumar, V., Seely, J., Du, A., Bittner, S., Berenzweig, A., Bolarinwa, A., Gramfort, A., and Mandel, M. emg2qwerty: A large dataset with baselines for touch typing using surface electromyography. In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024.</li>
+        <li>Graves, A., Fern&aacute;ndez, S., Gomez, F., and Schmidhuber, J. Connectionist temporal classification: labelling unsegmented sequence data with recurrent neural networks. In <em>Proceedings of the 23rd International Conference on Machine Learning (ICML)</em>, 2006.</li>
+        <li>Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., and Zagoruyko, S. End-to-end object detection with transformers. In <em>European Conference on Computer Vision (ECCV)</em>. Springer, 2020.</li>
+        <li>Shah, V., Von Weltin, E., Lopez, S., McHugh, J. R., Veloso, L., Golmohammadi, M., Obeid, I., and Picone, J. The temple university hospital seizure detection corpus. <em>Frontiers in neuroinformatics</em>, 12:83, 2018.</li>
+        <li>Accou, B., Bollens, L., Gillis, M., Verheijen, W., Van Hamme, H., and Francart, T. SparrKULee: A speech-evoked auditory response repository from KU Leuven, containing the EEG of 85 participants. <em>Data</em>, 9(8):94, 2024.</li>
+        <li>Tangermann, M., M&uuml;ller, K.-R., Aertsen, A., Birbaumer, N., Braun, C., Brunner, C., Leeb, R., Mehring, C., Miller, K. J., M&uuml;ller-Putz, G. R., et al. Review of the BCI competition IV. <em>Frontiers in neuroscience</em>, 6:55, 2012.</li>
+      </ol>
     </div>
   </section>
 
