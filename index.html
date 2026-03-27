@@ -206,6 +206,8 @@
     <a href="#fig5">Fig.&thinsp;5</a>
     <a href="#fig6">Fig.&thinsp;6</a>
     <a href="#fig7">Fig.&thinsp;7</a>
+    <a href="#tab2">Table&thinsp;2</a>
+    <a href="#tab3">Table&thinsp;3</a>
   </div>
 </nav>
 
@@ -318,6 +320,52 @@
     </div>
     <div class="fig-caption">
       <strong>Figure 7.</strong> Qualitative comparison of decoded event timelines on two motor imagery BCI datasets. <em>Top:</em> BNCI2014 (4-class: Tongue, Feet, Left Hand, Right Hand) showing a 70&thinsp;s excerpt from a held-out test session. <em>Bottom:</em> BNCI2015 (2-class: Feet, Right Hand) showing a 300&thinsp;s excerpt, illustrating performance at a longer time scale. Each row displays the ground-truth (GT) events and predictions from DANCE, CBraMod, and U-Net. Solid borders denote correct detections (prediction overlaps a same-class GT event by more than 50%), while dashed borders indicate false positives. Event-level F1 (F1<sub>e</sub>) and sample-level F1 (F1<sub>s</sub>) are reported on the right margin, computed over the full timeline.
+    </div>
+  </section>
+
+  <!-- Table 2 -->
+  <section class="figure-section" id="tab2">
+    <div class="fig-header"><h2>Table 2 — Foundation models with MLP head vs. DANCE</h2></div>
+    <div class="fig-body">
+      <table>
+<thead>
+<tr><th>Backbone</th><th><strong>BI2014b</strong></th><th><strong>BNCI2014</strong></th><th><strong>Broderick</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>CBraMod<sup>&dagger;</sup></td><td>.096</td><td>.212</td><td class="dance-col"><strong>.145</strong></td></tr>
+<tr><td>LaBraM</td><td>.099</td><td>.147</td><td>.057</td></tr>
+<tr><td>LaBraM<sup>&dagger;</sup></td><td><strong>.122</strong></td><td><strong>.220</strong></td><td>.043</td></tr>
+<tr><td>REVE</td><td>.097</td><td>.108</td><td>.030</td></tr>
+<tr style="border-top: 2px solid var(--accent);"><td><strong>DANCE</strong></td><td class="dance-col"><strong>.392</strong></td><td class="dance-col"><strong>.398</strong></td><td class="dance-col"><strong>.446</strong></td></tr>
+</tbody>
+</table>
+<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights.</p>
+    </div>
+    <div class="fig-caption">
+      <strong>Table 2.</strong> Foundation models with MLP head vs. DANCE. F1<sub>event</sub> at IoU&thinsp;&ge;&thinsp;0.5.
+    </div>
+  </section>
+
+  <!-- Table 3 -->
+  <section class="figure-section" id="tab3">
+    <div class="fig-header"><h2>Table 3 — Foundation models with Perceiver+DETR decoder vs. DANCE</h2></div>
+    <div class="fig-body">
+      <table>
+<thead>
+<tr><th>Backbone</th><th><strong>BI2014b</strong></th><th><strong>BNCI2014</strong></th><th><strong>Broderick</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>CBraMod<sup>&dagger;</sup></td><td>.391</td><td>.303</td><td class="dance-col"><strong>.447</strong></td></tr>
+<tr><td>LaBraM</td><td>.331</td><td>.203</td><td>.414</td></tr>
+<tr><td>LaBraM<sup>&dagger;</sup></td><td>.373</td><td>.208</td><td>.428</td></tr>
+<tr><td>REVE</td><td>.348</td><td>.220</td><td>.438</td></tr>
+<tr style="border-top: 2px solid var(--accent);"><td><strong>DANCE</strong></td><td class="dance-col"><strong>.392</strong></td><td class="dance-col"><strong>.398</strong></td><td class="dance-col"><strong>.446</strong></td></tr>
+</tbody>
+</table>
+<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. REVE pretrained: gated, unavailable.</p>
+    </div>
+    <div class="fig-caption">
+      <strong>Table 3.</strong> Foundation models equipped with our Perceiver+DETR decoder vs. DANCE. F1<sub>event</sub> at IoU&thinsp;&ge;&thinsp;0.5.
     </div>
   </section>
 
