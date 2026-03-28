@@ -211,6 +211,7 @@
     <a href="#fig1">Fig.&thinsp;R1</a>
     <a href="#fig2">Fig.&thinsp;R2</a>
     <a href="#tab1">Table&thinsp;R1</a>
+    <a href="#tab2">Table&thinsp;R2</a>
     <a href="#references">Refs</a>
   </div>
 </nav>
@@ -271,6 +272,34 @@
     </div>
     <div class="fig-caption">
       <strong>Table R1.</strong> <strong>Tokens/Event must be greater than 3 to enable sufficient resolution for the model to predict all events.</strong> The Perceiver module resamples every window into 256 latent tokens regardless of duration. Tokens/Event is computed as 256&thinsp;/&thinsp;<em>n&#772;<sub>events</sub></em>, where <em>n&#772;<sub>events</sub></em> is the mean number of events per window.
+    </div>
+  </section>
+
+
+  <section class="figure-section" id="tab2">
+    <div class="fig-header"><h2>Table R2 — Decoupled detection and localization metrics</h2></div>
+    <div class="fig-body">
+      <table>
+<thead>
+<tr><th colspan="2"></th><th colspan="3" class="group-header">DANCE</th><th colspan="3" class="group-header">Best Baseline</th></tr>
+<tr><th>Dataset</th><th>Best Baseline</th><th>F1<sub>det</sub></th><th>F1<sub>evt</sub></th><th>Δctr (s)</th><th>F1<sub>det</sub></th><th>F1<sub>evt</sub></th><th>Δctr (s)</th></tr>
+</thead>
+<tbody>
+<tr><td>BNCI2014</td><td>CBraMod</td><td class="dance-col"><strong>0.909</strong></td><td class="dance-col"><strong>0.398</strong></td><td class="dance-col"><strong>0.078</strong></td><td>0.627</td><td>0.212</td><td>0.277</td></tr>
+<tr><td>BNCI2015</td><td>CBraMod</td><td class="dance-col"><strong>0.843</strong></td><td class="dance-col"><strong>0.573</strong></td><td class="dance-col"><strong>0.170</strong></td><td>0.289</td><td>0.197</td><td>0.540</td></tr>
+<tr><td>SparrKULee</td><td>CBraMod</td><td class="dance-col"><strong>0.411</strong></td><td class="dance-col"><strong>0.411</strong></td><td class="dance-col"><strong>0.074</strong></td><td>0.194</td><td>0.194</td><td>0.806</td></tr>
+<tr><td>Broderick</td><td>CBraMod</td><td class="dance-col"><strong>0.446</strong></td><td class="dance-col"><strong>0.446</strong></td><td class="dance-col"><strong>0.014</strong></td><td>0.145</td><td>0.145</td><td>0.260</td></tr>
+<tr><td>Pinet</td><td>U-Net</td><td class="dance-col"><strong>0.354</strong></td><td class="dance-col"><strong>0.354</strong></td><td class="dance-col"><strong>0.021</strong></td><td>0.021</td><td>0.021</td><td>0.038</td></tr>
+<tr><td>TUAR</td><td>CBraMod</td><td class="dance-col"><strong>0.188</strong></td><td class="dance-col"><strong>0.145</strong></td><td class="dance-col"><strong>0.261</strong></td><td>0.172</td><td>0.122</td><td>0.377</td></tr>
+<tr><td>BI2013</td><td>CBraMod</td><td class="dance-col"><strong>0.639</strong></td><td class="dance-col"><strong>0.500</strong></td><td class="dance-col"><strong>0.128</strong></td><td>0.016</td><td>0.015</td><td>0.439</td></tr>
+<tr><td>BI2014a</td><td>CBraMod</td><td class="dance-col"><strong>0.704</strong></td><td class="dance-col"><strong>0.530</strong></td><td class="dance-col"><strong>0.125</strong></td><td>0.052</td><td>0.048</td><td>0.376</td></tr>
+<tr><td>BI2014b</td><td>CBraMod</td><td class="dance-col"><strong>0.529</strong></td><td class="dance-col"><strong>0.392</strong></td><td class="dance-col"><strong>0.121</strong></td><td>0.104</td><td>0.097</td><td>0.347</td></tr>
+<tr><td>TUSZ</td><td>CBraMod</td><td class="dance-col"><strong>0.353</strong></td><td class="dance-col"><strong>0.210</strong></td><td>4.522</td><td>0.021</td><td>0.012</td><td class="dance-col"><strong>3.878</strong></td></tr>
+</tbody>
+</table>
+    </div>
+    <div class="fig-caption">
+      <strong>Table R2.</strong> <strong>DANCE outperforms the best baselines on both F1 metrics across all 10 datasets, while simultaneously achieving 2&ndash;18&times; lower center prediction errors on 9 out of 10 tasks.</strong> The table shows decoupled detection and localization metrics for DANCE and the best non-ablation baseline per dataset (IoU&thinsp;&ge;&thinsp;0.5). F1<sub>detect</sub> measures class-agnostic event detection (&ldquo;was an event found?&rdquo;). F1<sub>event</sub> additionally requires correct classification. &Delta;center is the mean absolute temporal error between predicted and ground-truth event centers, in seconds, computed over true positives.
     </div>
   </section>
 
