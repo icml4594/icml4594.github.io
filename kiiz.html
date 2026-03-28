@@ -211,8 +211,8 @@
     <a href="#fig1">Fig.&thinsp;R1</a>
     <a href="#fig2">Fig.&thinsp;R2</a>
     <a href="#fig3">Fig.&thinsp;R3</a>
-    <a href="#tab3">Table&thinsp;R3</a>
-    <a href="#tab4">Table&thinsp;R4</a>
+    <a href="#tab1">Table&thinsp;R1</a>
+    <a href="#tab2">Table&thinsp;R2</a>
     <a href="#references">Refs</a>
   </div>
 </nav>
@@ -260,8 +260,8 @@
 
   <h3 class="section-divider">Supporting Material</h3>
 
-  <section class="figure-section" id="tab3">
-    <div class="fig-header"><h2>Table R3 &mdash; DANCE vs. Foundation Models</h2></div>
+  <section class="figure-section" id="tab1">
+    <div class="fig-header"><h2>Table R1 &mdash; DANCE vs. Foundation Models</h2></div>
     <div class="fig-body">
       <table>
 <thead>
@@ -280,13 +280,13 @@
 <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. <strong>Bold</strong> = best, <u>underline</u> = second best per column.</p>
     </div>
     <div class="fig-caption">
-      <strong>Table R3.</strong> <strong>Dense prediction with foundation backbones lags far behind DANCE.</strong> Each backbone (CBraMod, LaBraM, REVE) is trained from scratch or initialised from public pretrained weights and topped with a per-timestep MLP head. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation on three datasets. We use the public default configuration of the foundation models.
+      <strong>Table R1.</strong> <strong>Dense prediction with foundation backbones lags far behind DANCE.</strong> Each backbone (CBraMod, LaBraM, REVE) is trained from scratch or initialised from public pretrained weights and topped with a per-timestep MLP head. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation on three datasets. We use the public default configuration of the foundation models.
     </div>
   </section>
 
 
-  <section class="figure-section" id="tab4">
-    <div class="fig-header"><h2>Table R4 &mdash; DANCE vs. Foundation models with Perceiver+Decoder</h2></div>
+  <section class="figure-section" id="tab2">
+    <div class="fig-header"><h2>Table R2 &mdash; DANCE vs. Foundation models with Perceiver+Decoder</h2></div>
     <div class="fig-body">
       <table>
 <thead>
@@ -305,7 +305,7 @@
 <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. <strong>Bold</strong> = best, <u>underline</u> = second best per column.</p>
     </div>
     <div class="fig-caption">
-      <strong>Table R4.</strong> <strong>Adding a set-prediction decoder closes the gap, but DANCE still leads on most benchmarks.</strong> We are now comparing the DANCE architecture itself replacing our initial CNN backbone with the three foundational models. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation. We use the public default configuration of the foundation models.
+      <strong>Table R2.</strong> <strong>Adding a set-prediction decoder closes the gap, but DANCE still leads on most benchmarks.</strong> We are now comparing the DANCE architecture itself replacing our initial CNN backbone with the three foundational models. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation. We use the public default configuration of the foundation models.
     </div>
   </section>
 
