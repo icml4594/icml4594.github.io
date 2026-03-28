@@ -358,47 +358,51 @@
 
   <!-- Table R2 -->
   <section class="figure-section" id="tab3">
-    <div class="fig-header"><h2>Table R3 — Foundation models with MLP head vs. DANCE</h2></div>
+    <div class="fig-header"><h2>Table R3 &mdash; DANCE vs. Foundation Models</h2></div>
     <div class="fig-body">
       <table>
 <thead>
 <tr><th>Backbone</th><th><strong>BI2014b</strong></th><th><strong>BNCI2014</strong></th><th><strong>Broderick</strong></th></tr>
 </thead>
 <tbody>
-<tr><td>CBraMod<sup>&dagger;</sup></td><td>.096</td><td>.212</td><td>.145</td></tr>
-<tr><td>LaBraM</td><td>.099</td><td>.147</td><td>.057</td></tr>
-<tr><td>LaBraM<sup>&dagger;</sup></td><td>.122</td><td>.220</td><td>.043</td></tr>
-<tr><td>REVE</td><td>.097</td><td>.108</td><td>.030</td></tr>
+<tr><td>CBraMod</td><td>.098</td><td>.057</td><td>.119</td></tr>
+<tr><td>CBraMod<sup>&dagger;</sup></td><td>.096</td><td>.212</td><td><u>.145</u></td></tr>
+<tr><td>LaBraM</td><td>.099</td><td>.147</td><td>.056</td></tr>
+<tr><td>LaBraM<sup>&dagger;</sup></td><td><u>.122</u></td><td>.220</td><td>.043</td></tr>
+<tr><td>REVE</td><td>.116</td><td>.214</td><td>.041</td></tr>
+<tr><td>REVE<sup>&dagger;</sup></td><td>.108</td><td><u>.288</u></td><td>.044</td></tr>
 <tr style="border-top: 2px solid var(--accent);"><td><strong>DANCE</strong></td><td class="dance-col"><strong>.392</strong></td><td class="dance-col"><strong>.398</strong></td><td class="dance-col"><strong>.446</strong></td></tr>
 </tbody>
 </table>
-<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights.</p>
+<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. <strong>Bold</strong> = best, <u>underline</u> = second best per column.</p>
     </div>
     <div class="fig-caption">
-      <strong>Table R3.</strong> Foundation models with MLP head vs. DANCE. F1<sub>event</sub> at IoU&thinsp;&ge;&thinsp;0.5.
+      <strong>Table R3.</strong> <strong>Dense prediction with foundation backbones lags far behind DANCE.</strong> Each backbone (CBraMod, LaBraM, REVE) is trained from scratch or initialised from public pretrained weights and topped with a per-timestep MLP head. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation on three datasets. We use the public default configuration of the foundation models.
     </div>
   </section>
 
   <!-- Table R3 -->
   <section class="figure-section" id="tab4">
-    <div class="fig-header"><h2>Table R4 — Foundation models with Perceiver+DETR decoder vs. DANCE</h2></div>
+    <div class="fig-header"><h2>Table R4 &mdash; DANCE vs. Foundation models with Perceiver+Decoder</h2></div>
     <div class="fig-body">
       <table>
 <thead>
 <tr><th>Backbone</th><th><strong>BI2014b</strong></th><th><strong>BNCI2014</strong></th><th><strong>Broderick</strong></th></tr>
 </thead>
 <tbody>
-<tr><td>CBraMod<sup>&dagger;</sup></td><td>.391</td><td>.303</td><td class="dance-col"><strong>.447</strong></td></tr>
+<tr><td>CBraMod</td><td>.349</td><td>.205</td><td class="dance-col"><strong>.454</strong></td></tr>
+<tr><td>CBraMod<sup>&dagger;</sup></td><td><u>.391</u></td><td><u>.303</u></td><td><u>.447</u></td></tr>
 <tr><td>LaBraM</td><td>.331</td><td>.203</td><td>.414</td></tr>
-<tr><td>LaBraM<sup>&dagger;</sup></td><td>.373</td><td>.208</td><td>.428</td></tr>
-<tr><td>REVE</td><td>.348</td><td>.220</td><td>.438</td></tr>
+<tr><td>LaBraM<sup>&dagger;</sup></td><td>.373</td><td>.207</td><td>.428</td></tr>
+<tr><td>REVE</td><td>.374</td><td>.236</td><td>.416</td></tr>
+<tr><td>REVE<sup>&dagger;</sup></td><td>.366</td><td>.294</td><td>.442</td></tr>
 <tr style="border-top: 2px solid var(--accent);"><td><strong>DANCE</strong></td><td class="dance-col"><strong>.392</strong></td><td class="dance-col"><strong>.398</strong></td><td>.446</td></tr>
 </tbody>
 </table>
-<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. REVE pretrained: gated, unavailable.</p>
+<p style="font-size: 0.8rem; color: var(--text-secondary); text-align: left; margin-top: 0.5rem;"><sup>&dagger;</sup> = pretrained weights. <strong>Bold</strong> = best, <u>underline</u> = second best per column.</p>
     </div>
     <div class="fig-caption">
-      <strong>Table R4.</strong> Foundation models equipped with our Perceiver+DETR decoder vs. DANCE. F1<sub>event</sub> at IoU&thinsp;&ge;&thinsp;0.5.
+      <strong>Table R4.</strong> <strong>Adding a set-prediction decoder closes the gap, but DANCE still leads on most benchmarks.</strong> Same backbones as Table R1, now equipped with a Perceiver cross-attention module followed by a DETR-style bipartite-matching decoder. We report F1<sub>event</sub> (class-aware, IoU&thinsp;&ge;&thinsp;0.5) averaged over 5-fold cross-validation. We use the public default configuration of the foundation models.
     </div>
   </section>
 
